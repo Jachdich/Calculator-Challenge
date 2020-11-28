@@ -1,21 +1,21 @@
-import "./styles.css";
+//import "./styles.css";
 
 //-------------------------------------------------------------------
 // TASK 1
 const sum = (a, b) => {
-  //Your code
+	return a+b;
 };
 
 const subtract = (a, b) => {
-  //Your code
+  return a-b;
 };
 
 const multiply = (a, b) => {
-  //Your code
+  return a*b;
 };
 
 const divide = (a, b) => {
-  //Your code
+  return a/b;
 };
 //-------------------------------------------------------------------
 
@@ -84,6 +84,8 @@ function handleOperator(nextOperator) {
     //-------------------------------------------------------------------
     //  TASK 2
 
+    calculator.infoValue = result % 2 ? "odd" : "even";
+
     //-------------------------------------------------------------------
 
     calculator.firstOperand = result;
@@ -144,7 +146,7 @@ keys.addEventListener("click", (event) => {
   //-------------------------------------------------------------------
   // TASK 3
   /// convert the target.value to binary here:
-  calculator.infoValue = target.value;
+  calculator.infoValue = (target.value >>> 0).toString(2);
   //-------------------------------------------------------------------
 
   inputDigit(target.value);
